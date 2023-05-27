@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="/submit" method="POST">
+        <label for="text-input">Text Input:</label>
+        <input type="text" id="text-input" name="text-input" placeholder="Enter text" required>
+        <br />
+        <label for="password-input">Password:</label>
+        <input type="password" id="password-input" name="password-input" required>
+        <br />
+        <label for="email-input">Email:</label>
+        <input type="email" id="email-input" name="email-input" required>
+        <br />
+        <label for="number-input">Number:</label>
+        <input type="number" id="number-input" name="number-input" min="1" max="10" required>
+        <br />
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input" name="date-input" required>
+        <br />
+        <label for="checkbox-input">Checkbox:</label>
+        <input type="checkbox" id="checkbox-input" name="checkbox-input">
+        <br />
+        <label for="radio-input-1">Radio 1:</label>
+        <input type="radio" id="radio-input-1" name="radio-input" value="option1" checked>
+        <br />
+        <label for="radio-input-2">Radio 2:</label>
+        <input type="radio" id="radio-input-2" name="radio-input" value="option2">
+        <br />
+        <label for="file-input">File Upload:</label>
+        <input type="file" id="file-input" name="file-input">
+        <br />
+        <label for="color-input">Color:</label>
+        <input type="color" id="color-input" name="color-input">
+        <br />
+        <label for="range-input">Range:</label>
+        <input type="range" id="range-input" name="range-input" min="0" max="100">
+        <br />
+        <label for="search-input">Search:</label>
+        <input type="search" id="search-input" name="search-input">
+        <br />
+        <label for="tel-input">Telephone:</label>
+        <input type="tel" id="tel-input" name="tel-input" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="###-###-####">
+        <br />
+        <label for="url-input">URL:</label>
+        <input type="url" id="url-input" name="url-input">
+        <br />
+        <label for="hidden-input">Hidden Field:</label>
+        <input type="hidden" id="hidden-input" name="hidden-input" value="hidden-value">
+        <br />
+        <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars" size="4" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+
+        <input type="text" list="fruits">
+        <datalist id="fruits">
+        <option value="Apple">
+        <option value="Banana">
+        <option value="Orange">
+        <option value="Mango">
+        </datalist>
+
+        <br />
+        <select>
+            <optgroup label="Fruits">
+              <option value="apple">Apple</option>
+              <option value="banana">Banana</option>
+            </optgroup>
+            <optgroup label="Cars">
+              <option value="volvo">Volvo</option>
+              <option value="audi">Audi</option>
+            </optgroup>
+        </select>
+        <br />
+        <label for="submit-input">Submit:</label>
+        <input type="submit" id="submit-input" value="Submit">
+    </form>
+
+</body>
+
+</html>
