@@ -1,5 +1,6 @@
-HTML stands for `Hyper Text Markup Language`, which is the most widely used language on web to develop web pages. It describe the structure of a web page consists of a series of elements which tells the browser how to display the content.
-
+HTML stands for `Hyper Text Markup Language`, which is the most widely used language on web to develop web pages. It describe the structure of a web page consists of a series of elements which tells the browser how to display the content.<br />
+In HTML, "hypertext" refers to the ability to create links between different web pages or different sections within a web page. Hypertext allows users to navigate through interconnected information by clicking on links, which can lead to other pages, documents, or resources.<br />
+A "markup language" is a system for annotating or adding additional information to text in order to provide structure, formatting, or instructions for how it should be displayed or interpreted. In the case of HTML, it is a markup language specifically designed for creating web pages. HTML uses tags (enclosed in angle brackets) to mark up elements within the document, indicating their purpose and how they should be presented in a web browser. The tags define the structure, content, and formatting of the web page, allowing browsers to render it correctly.
 `HTML is not case sensitive`
 
 ## Basic structure
@@ -90,6 +91,9 @@ The name is the property we want to set and the value is what you want the value
 6. `<bdo>`: BDO stands for Bi-Directional Override. Used to override the current text direction.`<bdo dir="rtl">This text will be written from right to left</bdo>`
 
 ## HTML links
+A hyperlink, often referred to simply as a link, is a reference or connection from one web page to another web page, document, or resource. It is typically represented as a highlighted or underlined text, an image, or a button that can be clicked or activated by a user.
+
+When a user clicks on a hyperlink, it triggers the browser to navigate to the linked location, which can be within the same website or on a different website altogether. Hyperlinks are an essential part of the World Wide Web, as they enable the interconnectedness of web pages and facilitate navigation between different online resources.
 ### anchor tag
 `<a>`: This tag in HTML is used to create hyperlinks, allowing users to navigate to different web pages or specific sections within a page. It stands for "anchor" and is often referred to as the 'anchor tag.' It is an inline element.
 
@@ -420,3 +424,26 @@ HTML provides several elements and attributes for embedding multimedia content s
   Your browser does not support the video tag.
 </video>
 ```
+
+## HTML entities
+In HTML, entities are special codes used to represent characters that have special meaning or cannot be easily represented directly in HTML code. They are also known as character entities or HTML entities. Entities are particularly useful when you need to display reserved characters or symbols as text within an HTML document. Here are a few commonly used entities in HTML:
+1. &lt; represents the less-than symbol (<).
+2. &gt; represents the greater-than symbol (>).
+3. &amp; represents the ampersand symbol (&).
+4. &quot; represents the double quotation mark (").
+5. &apos; represents the single quotation mark (').
+6. &nbsp; represents a non-breaking space.
+7. &copy; represents the copyright symbol (©).
+8. &reg; represents the registered trademark symbol (®).
+9. &mdash; represents an em dash (—).
+10. &ldquo; represents a left double quotation mark (“).
+
+## HTML containers
+In HTML, "containers" generally refer to elements or tags that are used to group and contain other elements or content within them. Containers play a crucial role in structuring and organizing the layout of a web page.
+1. `<div>`: The `<div>` element is a generic container that does not have any inherent semantic meaning. It is often used to group and style related content or sections of a web page.
+2. `<span>`: The `<span>` element is an inline container that is typically used for grouping and styling a small portion of text or inline elements within a larger block of content.
+3. `<section>`: The `<section>` element represents a standalone section of content within a document. It is typically used to divide the content into meaningful sections, such as chapters, headers, footers, or specific parts of a web page.
+4. `<article>`: The `<article>` element represents a self-contained composition or independent piece of content, such as a blog post, news article, or forum post. It should make sense and be meaningful on its own.
+5. `<header>`: The `<header>` element represents the introductory or navigational section at the top of a document or a section within a document. It often contains headings, logos, navigation menus, or other introductory content.
+6. `<nav>`: The `<nav>` element is used to define a section of navigation links within a document. It is typically used for site navigation menus, allowing users to navigate between different sections or pages.
+7. `<footer>`: The `<footer>` element represents the footer or closing section of a document or a specific section within a document. It often contains information about the author, copyright notices, contact details, or links to related documents.
