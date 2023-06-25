@@ -427,16 +427,16 @@ HTML provides several elements and attributes for embedding multimedia content s
 
 ## HTML entities
 In HTML, entities are special codes used to represent characters that have special meaning or cannot be easily represented directly in HTML code. They are also known as character entities or HTML entities. Entities are particularly useful when you need to display reserved characters or symbols as text within an HTML document. Here are a few commonly used entities in HTML:
-1. &lt; represents the less-than symbol (<).
-2. &gt; represents the greater-than symbol (>).
-3. &amp; represents the ampersand symbol (&).
-4. &quot; represents the double quotation mark (").
-5. &apos; represents the single quotation mark (').
-6. &nbsp; represents a non-breaking space.
-7. &copy; represents the copyright symbol (©).
-8. &reg; represents the registered trademark symbol (®).
-9. &mdash; represents an em dash (—).
-10. &ldquo; represents a left double quotation mark (“).
+1. `&lt;` represents the less-than symbol (<).
+2. `&gt;` represents the greater-than symbol (>).
+3. `&amp;` represents the ampersand symbol (&).
+4. `&quot;` represents the double quotation mark (").
+5. `&apos;` represents the single quotation mark (').
+6. `&nbsp;` represents a non-breaking space.
+7. `&copy;` represents the copyright symbol (©).
+8. `&reg;` represents the registered trademark symbol (®).
+9. `&mdash;` represents an em dash (—).
+10. `&ldquo;` represents a left double quotation mark (“).
 
 ## HTML containers
 In HTML, "containers" generally refer to elements or tags that are used to group and contain other elements or content within them. Containers play a crucial role in structuring and organizing the layout of a web page.
