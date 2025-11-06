@@ -210,12 +210,23 @@ The `<picture>` element contains one or more `<source>` tags with different `src
   <dd>Definition 2</dd>
 </dl>
 ```
-## HTML block and inline
-A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element. A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
-`<address>      <article>       <aside>     <blockquote>    <canvas>    <dd>    <div>   <dl>    <dt>    <fieldset>  <figcaption>    <figure>    <footer>    <form>  <h1>-<h6>   <header>    <hr>    <li>    <main>      <nav>   <noscript>  <ol>    <p> <pre>   <section>   <table>     <tfoot>     <ul>    <video>`
 
-An inline element does not start on a new line. It only takes up as much width as necessary.
-`<a>    <abbr>  <acronym>   <b>  <bdo> <big>    <br>    <button>    <cite>  <code>    <dfn>   <em>   <i>    <img>   <input>    <kbd>   <label>    <map>   <object>   <output>   <q>    <samp>  <script>  <select>  <small>   <span>     <strong>    <sub>    <sup>   <textarea>    <time>   <tt>   <var>`
+## HTML block and inline
+| Feature | Block-Level Elements | Inline Elements |
+|----------|----------|----------|
+| Line Breaks | Always start on a new line and force the next element onto a new line. | Do not start on a new line; they flow along with the text/content. |
+| Width | Occupy the full available width of their parent container by default, even if the content is narrow. | Occupy only as much width as is necessary for their content. |
+| Height/Width | Respect width and height CSS properties | Do not respect width and height properties |
+| Margins/Padding | Accept margin and padding on all four sides (top, bottom, left, right) | Only accept horizontal margin and padding (left and right); vertical margins (top and bottom) are ignored by the surrounding layout flow |
+| Containment | Can contain other block-level elements, inline elements, and text | Can typically only contain data (text) and other inline elements |
+
+- Block: `<div>, <p>, <h1> to <h6>, <ul>, <li>, <section>, <article>, <header>, <footer>`.
+- Inline: `<span>, <a>, <img>, <strong>, <em>, <input>, <label>, <code>`.
+
+> display: inline-block;: This is a crucial intermediate type. It allows an element to flow inline with content (not starting on a new line) while still allowing you to set width, height, and vertical margins/padding (like a block element). This is commonly used for navigation menus and grids.
+
+> [!NOTE]
+> Placing a block-level elements inside an inline element is invalid HTML and can cause unexpected layout issues, as the browser will often force the block element out of its inline parent's context. 
 
 ## HTML frames
 Frames in HTML were a feature used in older versions of HTML to divide a web page into multiple independent sections or windows, each with its own content.
