@@ -226,7 +226,21 @@ The `<picture>` element contains one or more `<source>` tags with different `src
 > display: inline-block;: This is a crucial intermediate type. It allows an element to flow inline with content (not starting on a new line) while still allowing you to set width, height, and vertical margins/padding (like a block element). This is commonly used for navigation menus and grids.
 
 > [!NOTE]
-> Placing a block-level elements inside an inline element is invalid HTML and can cause unexpected layout issues, as the browser will often force the block element out of its inline parent's context. 
+> Placing a block-level elements inside an inline element is invalid HTML and can cause unexpected layout issues, as the browser will often force the block element out of its inline parent's context.
+
+## Non-replaced inline elements
+Their content is contained within the HTML document itself.
+- They only take up as much width as the content they wrap.
+- We can't set a specific width or height on them.
+- They don't respect top or bottom margin and padding.
+- Examples: `<span>, <a>, <em>, <strong>, <code>`
+
+## Replaced inline elements
+The content of these elements is replaced by an extenal resource, and their representation is independent of the CSS formatting model.
+- They behave like an inline element but can accept width and height properties.
+- They have intrinsic dimensions based on the external resource they display.
+- They respect all margin and padding properties.
+- Examples: `<img>, <video>, <iframe>, <input>`
 
 ## HTML frames
 Frames in HTML were a feature used in older versions of HTML to divide a web page into multiple independent sections or windows, each with its own content.
