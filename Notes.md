@@ -21,6 +21,24 @@ A "markup language" is a system for annotating or adding additional information 
 3. `<head>`: This tag represents the document's header which can keep other HTML tags like `<title>`, `<link>` etc.
 4. `<title>`: This tag is used inside the <head> tag to mention the document title.
 5. `<body>`: This tag represents the document's body which keeps other HTML tags like `<h1>`, `<div>`, `<p>` etc.
+
+## preload, prefetch and preconnect
+| Hint | Purpose | Priority | Usage Context |
+| ---- | ------- | -------- | ------------- |
+| preload | Fetches a critical resource needed for the current page right away | High | Used for resources discovered late (e.g., fonts in CSS, background images) that are essential for the initial rendering. |
+| prefetch | Fetches a non-critical resource that might be needed for a future navigation (next page). | Low | Used for pages or assets (JS, CSS, images) the user is likely to visit next, during the browser's idle time. |
+| preconnext | Establishes an early connection to another domain (DNS, TCP, TLS handshake) without downloading a specific file. | Medium | Used for critical third-party origins (CDNs, APIs, analytics) to save time on the network handshake when the resource is eventually requested. |
+```html
+<!-- Preload a critical font for the current page -->
+<link rel="preload" href="/fonts/custom-font.woff2" as="font" crossorigin>
+
+<!-- Prefetch a JavaScript file likely needed on the next page -->
+<link rel="prefetch" href="/library.js" as="script">
+
+<!-- Preconnect to a third-party CDN origin -->
+<link rel="preconnect" href="https://cdn.example.com">
+```
+
 ## HTML element and tags
 An element is a fundamental building block used to structue and define the content of a web page. Elements are represented by tags, which are enclosed within angle brackets ('<' and '>'). Tags provide instructions to the web browser on how to interpret and display the content.
 
