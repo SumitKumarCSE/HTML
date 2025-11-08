@@ -182,6 +182,44 @@ The `<picture>` element contains one or more `<source>` tags with different `src
   <img src="image-small.jpg" alt="Description of the image">
 </picture>
 ```
+
+## loading = "lazy"
+> It is an HTML attribute that tells the browser to **defer loading** of an image **until it's needed** - i.e., until it's close to (on inside) the viewport.
+
+It's a lazy-loading mechanism built directly into the browser (no JS library needed).
+
+```html
+<img src="large-photo.jpg" alt="A photo" loading="lazy" />
+```
+
+**Why is it needed?**
+
+`By default, the browser **eagerly downloads all images** as soon as it parses the <img> tags - even if they're far below the fold (not visible yet).`
+
+That causes:
+- Slower page load times
+- Higher data usage
+- Poor Core Web Vitals scores (especially LCP)
+
+### Attribute values
+- **eager**: Load image immediately (default behaviour)
+- **lazy**: Defer loading until image is near viewport
+- **auto**: Let the browser decide (depends on heuristics)
+
+**How it works internally?**
+
+The browser:
+1. **Creates a placeholder box** for the image in layout (so the layout doesn't jump later).
+2. **Does not fetch** the actual image immediately.
+3. Watches the image's position using something like **Intersection Observer logic internally**.
+4. When the image is about to enter the viewport (e.g., ~300px before), the browser starts fetching it.
+5. Once downloaded, the image is decoded and painted to screen.
+
+So users only download images they might actually see.
+
+>[!Note]
+>Specify width and height to **prevent layout shifts (CLS)**.
+
 ## HTML lists
 1. `<ul>`: An unordered list is used to represent a list of items where the order of the items is not important. Each list item is represented by the `<li>` (list item) tag. `type`: attribute to specify the type of bullet you like, square, disc, circle.
 ```html
